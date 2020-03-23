@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 import logo from "./img/user_img.png";
 import HelpIcon from "@material-ui/icons/Help";
+import Sidebar from "./sidebar/Sidebar";
 export default function NavBar() {
   return (
     <>
@@ -11,15 +12,18 @@ export default function NavBar() {
         variant="dark"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Navbar.Brand
-          href="#home"
-          style={{
-            backgroundColor: "orange",
-            padding: "10px 10px"
-          }}
-        >
-          Resource Mangement
-        </Navbar.Brand>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Sidebar />
+          <Navbar.Brand
+            href="#home"
+            style={{
+              backgroundColor: "orange",
+              padding: "10px 10px"
+            }}
+          >
+            Resource Mangement
+          </Navbar.Brand>
+        </div>
         <div>
           <img
             src={logo}
