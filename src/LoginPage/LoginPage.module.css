@@ -1,0 +1,43 @@
+form{
+    margin:10px auto;
+    
+}
+
+
+.button{
+    color: white;
+    background-color: #FF5E13;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+}
+
+.btn {
+    color: white;
+    width: 40%;
+    height: 30px;
+    background-color: #FF5E13;
+  }
+
+  .psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+
+.register {
+  color: #FF5E13;
+  text-align:center;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.Link{
+  display:inline-block;
+  text-align: center;
+  padding: 5px 0;
+  color: white;
+  width: 20%;
+  height: 30px;
+  background-color: #FF5E13;
+}
