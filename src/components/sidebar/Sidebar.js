@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./sidebar.css";
-import MenuOpenIcon from "@material-ui/icons/MenuOpen";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const Sidebar = () => {
-  const Links = [
+  const links = [
     { url: "/resource", name: "Resource" },
     { url: "/project", name: "Project" },
     { url: "/formula", name: "Formula" }
@@ -26,23 +26,29 @@ const Sidebar = () => {
   };
   return (
     <div>
-      <MenuOpenIcon
-        onClick={handleClick}
-        className="icon-color"
-        style={{ color: "#fff", fontSize: "36px" }}
-      />
       <div className={style}>
-        <Router>
-          <ul className="router">
-            {Links.map(link => (
-              <li className="li">
-                <Link className="link" to={link.url} onClick={handleClick}>
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Router>
+        <div className="router">
+          <li className="empty-li">
+            {open ? (
+              <ExpandMoreIcon
+                style={{ transform: "rotate(-90deg)" }}
+                onClick={handleClick}
+              />
+            ) : (
+              <ExpandMoreIcon
+                style={{ transform: "rotate(90deg)" }}
+                onClick={handleClick}
+              />
+            )}
+          </li>
+          {links.map(link => {
+            return (
+              <Link className="link" to={link.url} onClick={handleClick}>
+                {link.name}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

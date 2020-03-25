@@ -8,17 +8,23 @@ export default function NavBar() {
   return (
     <>
       <Navbar
-        bg="dark"
+        bg="light"
         variant="dark"
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderBottom: "1px solid #000"
+        }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div>
           <Sidebar />
           <Navbar.Brand
             href="#home"
             style={{
               backgroundColor: "orange",
-              padding: "10px 10px"
+              padding: "10px 10px",
+              margin: "0"
             }}
           >
             Resource Mangement
@@ -31,7 +37,7 @@ export default function NavBar() {
             style={{ width: 50, height: 50, borderRadius: "50%" }}
           />
           <HelpIcon
-            style={{ color: "#fff", width: 45, height: 45, marginLeft: 50 }}
+            style={{ color: "#000", width: 45, height: 45, marginLeft: 50 }}
           />
         </div>
       </Navbar>
